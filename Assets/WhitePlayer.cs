@@ -5,7 +5,6 @@ using UnityEngine;
 public class WhitePlayer : MonoBehaviour
 {
     AudioSource falling;
-    bool failed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +16,10 @@ public class WhitePlayer : MonoBehaviour
     void Update()
     {
         
-        if (!failed && transform.position.y < -5)
-        {
-            Debug.Log(transform.position.y);
-            falling.Play(0);
-            failed = true;
-        }
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+    	if (collider.gameObject.name == "Lava") falling.Play();
     }
 }
