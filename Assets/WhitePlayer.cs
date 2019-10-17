@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class WhitePlayer : MonoBehaviour
 {
-    AudioSource falling;
+    private AudioSource audioComponent;
+    
+    public AudioClip fallingSound;
+    public AudioClip bounceSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        falling = GetComponent<AudioSource>();
+        audioComponent = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -18,8 +21,19 @@ public class WhitePlayer : MonoBehaviour
         
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "chessman" || 
+            collision.gameObject.name == "board")
+        {
+    	    audioComponent.PlayOneShot(bounceSound);
+        }
+    }
+
     void OnTriggerEnter(Collider collider)
     {
-    	if (collider.gameObject.name == "Lava") falling.Play();
+    	if (collider.gameObject.name == "Lava") {
+    		audioComponent.PlayOneShot(fallingSound);
+    	}
     }
 }

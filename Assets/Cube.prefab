@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5968360195803940162}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: chessman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,3 +245,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f371b1d3929a3642bcd185b8d7113f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fallingSound: {fileID: 8300000, guid: bf6d71f1282932240a96c018a9a4727b, type: 3}
+  bounceSound: {fileID: 8300000, guid: aa2b0755b9dbdb246b1a4d94158fb2a6, type: 3}
