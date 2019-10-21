@@ -175,7 +175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170076733}
   m_LocalRotation: {x: 0.42403692, y: -0.45259845, z: 0.7124379, w: 0.32829788}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -19.8, y: -87.4, z: 138.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -322,6 +322,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.85585874
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010087527202529119, guid: cbfa22c361239db4ab6bdfabb3f7ec52,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7010087527202529091, guid: cbfa22c361239db4ab6bdfabb3f7ec52,
         type: 3}
@@ -507,6 +512,10 @@ PrefabInstance:
     - target: {fileID: 154346, guid: 86672f35e84daff4699b96a3c82ee675, type: 3}
       propertyPath: m_Name
       value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 154346, guid: 86672f35e84daff4699b96a3c82ee675, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 421958, guid: 86672f35e84daff4699b96a3c82ee675, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1318,6 +1327,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ba44901e27656394a83c87ba14ddbdd9, type: 3}
       propertyPath: m_Name
       value: board
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ba44901e27656394a83c87ba14ddbdd9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ba44901e27656394a83c87ba14ddbdd9, type: 3}
       propertyPath: m_LocalPosition.x
