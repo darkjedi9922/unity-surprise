@@ -18,7 +18,7 @@ public class MainPlayer : MonoBehaviour
         float vValue = Input.GetAxis("Vertical");
         float hValue = Input.GetAxis("Horizontal");
    
-        transform.Translate(0, 0, vValue / (float) 5);
+        transform.Translate(0, 0, vValue / (float) 20);
         transform.Rotate(0, hValue * 2, 0);
     }
 }
