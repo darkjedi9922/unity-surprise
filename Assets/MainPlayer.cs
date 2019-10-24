@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class MainPlayer : MonoBehaviour
 {
-    //private Transform transform;
-
     // Start is called before the first frame update
     void Start()
     {
-        //transform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
         float vValue = Input.GetAxis("Vertical");
-        float hValue = Input.GetAxis("Horizontal");
-   
         transform.Translate(0, 0, vValue / (float) 20);
-        transform.Rotate(0, hValue * 2, 0);
+
+        bool mouse0 = Input.GetKey("mouse 0");
+        if (mouse0) {
+            float mouseX = Input.GetAxis("Mouse X");
+            transform.Rotate(0, mouseX * 10, 0);
+        }
     }
 }
