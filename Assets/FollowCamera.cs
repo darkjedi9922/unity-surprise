@@ -30,15 +30,15 @@ public class FollowCamera : MonoBehaviour
             return;
         }
 
-        bool mouse = Input.GetKey("mouse 0");
-        if (mouse) {
-            float mouseY = Input.GetAxis("Mouse Y");
-            float diff = -mouseY * 5;
-            fixedRotX += diff;
+        // bool mouse = Input.GetKey("mouse 0");
+        // if (mouse) {
+        //     float mouseY = Input.GetAxis("Mouse Y");
+        //     float diff = -mouseY * 5;
+        //     fixedRotX += diff;
             
-            if (fixedRotX < ceilRotateValue) fixedRotX = ceilRotateValue;
-            else if (fixedRotX > floorRotateValue) fixedRotX = floorRotateValue;
-        }
+        //     if (fixedRotX < ceilRotateValue) fixedRotX = ceilRotateValue;
+        //     else if (fixedRotX > floorRotateValue) fixedRotX = floorRotateValue;
+        // }
     }
 
     void LateUpdate ()
