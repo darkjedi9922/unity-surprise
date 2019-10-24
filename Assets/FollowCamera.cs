@@ -5,35 +5,53 @@ using UnityEngine;
 public class FollowCamera : MonoBehaviour
 {
     public GameObject player;
+    public float ceilRotateValue = -75;
+    public float floorRotateValue = 75;
     
     private WhitePlayer white;
-    private Vector3 startRotation;
-    private float startY;
+    private float fixedPosY;
+    
+    private float fixedRotX;
+    private float fixedRotZ;
 
     void Start()
     {
-        startRotation = transform.rotation.eulerAngles;
-        startY = transform.position.y;
+        fixedPosY = transform.position.y;
+        fixedRotX = transform.rotation.eulerAngles.x;
+        fixedRotZ = transform.rotation.eulerAngles.z;
 
         white = player.GetComponent<WhitePlayer>();
     }
 
     void Update()
     {
-        if (white.isDied()) transform.parent = null;
+        if (white.isDied()) {
+            transform.parent = null;
+            return;
+        }
+
+        bool mouse = Input.GetKey("mouse 0");
+        if (mouse) {
+            float mouseY = Input.GetAxis("Mouse Y");
+            float diff = -mouseY * 5;
+            fixedRotX += diff;
+            
+            if (fixedRotX < ceilRotateValue) fixedRotX = ceilRotateValue;
+            else if (fixedRotX > floorRotateValue) fixedRotX = floorRotateValue;
+        }
     }
 
     void LateUpdate ()
     {
         transform.rotation = Quaternion.Euler(
-            startRotation.x,
+            fixedRotX,
             transform.rotation.eulerAngles.y,
-            startRotation.z
+            fixedRotZ
         );
 
         transform.position = new Vector3(
             transform.position.x,
-            startY,
+            fixedPosY,
             transform.position.z
         );
     }

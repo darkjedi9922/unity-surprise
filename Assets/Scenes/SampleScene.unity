@@ -291,7 +291,7 @@ PrefabInstance:
     - target: {fileID: 7010087527202529119, guid: cbfa22c361239db4ab6bdfabb3f7ec52,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.9490265
+      value: 1.6952683
       objectReference: {fileID: 0}
     - target: {fileID: 7010087527202529119, guid: cbfa22c361239db4ab6bdfabb3f7ec52,
         type: 3}
@@ -301,7 +301,7 @@ PrefabInstance:
     - target: {fileID: 7010087527202529119, guid: cbfa22c361239db4ab6bdfabb3f7ec52,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.48016128
+      value: 0.85328215
       objectReference: {fileID: 0}
     - target: {fileID: 7010087527202529119, guid: cbfa22c361239db4ab6bdfabb3f7ec52,
         type: 3}
@@ -316,7 +316,7 @@ PrefabInstance:
     - target: {fileID: 7010087527202529119, guid: cbfa22c361239db4ab6bdfabb3f7ec52,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.038940806
+      value: 0.038940817
       objectReference: {fileID: 0}
     - target: {fileID: 7010087527202529119, guid: cbfa22c361239db4ab6bdfabb3f7ec52,
         type: 3}
@@ -975,7 +975,7 @@ GameObject:
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!81 &534669903
 AudioListener:
@@ -1054,6 +1054,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 235174479}
+  ceilRotateValue: -20
+  floorRotateValue: 15
 --- !u!1001 &642229841
 PrefabInstance:
   m_ObjectHideFlags: 0
