@@ -10,6 +10,7 @@ public class MainPlayer : MonoBehaviour
     void Start()
     {
         white = GetComponent<WhitePlayer>();
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
