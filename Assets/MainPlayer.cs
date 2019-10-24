@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class MainPlayer : MonoBehaviour
 {
+    private WhitePlayer white;
+
     // Start is called before the first frame update
     void Start()
     {
+        white = GetComponent<WhitePlayer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (white.isDied()) return;
+
         float vValue = Input.GetAxis("Vertical");
         transform.Translate(0, 0, vValue / (float) 20);
 
