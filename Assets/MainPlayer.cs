@@ -20,10 +20,7 @@ public class MainPlayer : MonoBehaviour
         float vValue = Input.GetAxis("Vertical");
         transform.Translate(0, 0, vValue / (float) 20);
 
-        bool mouse0 = Input.GetKey("mouse 0");
-        if (mouse0) {
-            float mouseX = Input.GetAxis("Mouse X");
-            transform.Rotate(0, mouseX * 10, 0);
-        }
+        float hValue = Input.GetAxis("Horizontal");
+        transform.Rotate(0, hValue * 2, 0);
     }
 }
