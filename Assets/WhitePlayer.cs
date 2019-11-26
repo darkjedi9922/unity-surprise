@@ -9,6 +9,8 @@ public class WhitePlayer : MonoBehaviour
     public AudioClip fallingSound;
     public AudioClip bounceSound;
 
+    private bool died = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,12 @@ public class WhitePlayer : MonoBehaviour
     {
     	if (collider.gameObject.name == "Lava") {
     		audioComponent.PlayOneShot(fallingSound);
+            died = true;
     	}
+    }
+
+    public bool isDied()
+    {
+        return died;
     }
 }
